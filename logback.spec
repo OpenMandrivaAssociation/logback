@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:           logback
-Version:        1.0.13
-Release:        1.1%{?dist}
+Version:        1.1.2
+Release:        1.1
 Summary:        A Java logging library
 License:        LGPLv2 or EPL
 URL:            http://logback.qos.ch/
@@ -22,7 +22,7 @@ BuildRequires: mvn(org.apache.tomcat:tomcat-servlet-api)
 BuildRequires: mvn(org.codehaus.groovy:groovy)
 BuildRequires: mvn(org.codehaus.janino:janino)
 BuildRequires: mvn(org.eclipse.jetty:jetty-server)
-BuildRequires: mvn(org.fusesource:fusesource-pom)
+BuildRequires: mvn(org.fusesource:fusesource-pom:pom:)
 BuildRequires: mvn(org.fusesource.jansi:jansi)
 BuildRequires: mvn(org.slf4j:slf4j-api)
 BuildRequires: mvn(org.slf4j:slf4j-ext)
@@ -54,7 +54,7 @@ BuildRequires: mvn(org.subethamail:subethasmtp:2.1.0)
 
 # antrun plugin deps
 BuildRequires: mvn(org.apache.ant:ant-junit)
-BuildRequires: mvn(org.apache.felix:org.apache.felix.main)
+BuildRequires: mvn(org.apache.felix:org.apache.felix.main:pom:)
 BuildRequires: mvn(junit:junit)
 
 BuildRequires: maven-local
@@ -126,6 +126,8 @@ sed -i 's#<groupId>javax.servlet#<groupId>org.apache.tomcat#' $(find . -name "po
 sed -i 's#<artifactId>servlet-api#<artifactId>tomcat-servlet-api#' $(find . -name "pom.xml")
 sed -i 's#javax.servlet.*;version="2.5"#javax.servlet.*;version="3.0"#' %{name}-access/pom.xml
 sed -i 's#<version>2.5</version>#<version>${tomcat.version}</version>#' pom.xml
+
+sed -i 's#<version>1.2.14</version>#<version>1.2.17</version>#' %{name}-examples/pom.xml
 
 rm -r %{name}-*/src/test/java/*
 # remove test deps

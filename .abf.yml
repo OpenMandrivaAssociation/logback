@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   logback-1.0.13.tar.gz: 8a64bccf5fb570b69195e644c4f56ab84cbbc5f1
+sources:
+  logback-1.1.2.tar.gz: a0d59fc533394e45848c84b5844d1582bb764859
