@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:           logback
 Version:        1.1.2
-Release:        1.1
+Release:        1.2
 Summary:        A Java logging library
 License:        LGPLv2 or EPL
 URL:            http://logback.qos.ch/
