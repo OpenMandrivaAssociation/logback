@@ -4,7 +4,7 @@ Version:        1.1.2
 Release:        1.2
 Summary:        A Java logging library
 License:        LGPLv2 or EPL
-URL:            http://logback.qos.ch/
+URL:            https://logback.qos.ch/
 Source0:        http://logback.qos.ch/dist/%{name}-%{version}.tar.gz
 # use antrun-plugin instead of gmaven
 Patch0:         %{name}-1.0.10-antrunplugin.patch
